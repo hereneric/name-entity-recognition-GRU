@@ -1,5 +1,7 @@
-*
-!*.py
-!*.sh
-!rnn_predictions.conll
-!.gitignore
+*.pyc
+*~
+*.txt
+*.conll
+*.masked
+*.png
+!results/rnn/20170221_213058/rnn_predictions.conll
