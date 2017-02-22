@@ -4,4 +4,5 @@
 *.conll
 *.masked
 *.png
+results/rnn/20170221_213058/*
 !results/rnn/20170221_213058/rnn_predictions.conll
