@@ -52,7 +52,7 @@ class Config:
 
         if "output_path" in args:
             # Where to save things.
-            self.output_path = args.model_path
+            self.output_path = args.output_path
         else:
             self.output_path = "results/{}/{:%Y%m%d_%H%M%S}/".format(self.cell, datetime.now())
         self.model_output = self.output_path + "model.weights"
