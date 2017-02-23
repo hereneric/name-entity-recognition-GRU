@@ -52,7 +52,7 @@ class Config:
 
         if "output_path" in args:
             # Where to save things.
-            self.output_path = args.output_path
+            self.output_path = args.model_path
         else:
             self.output_path = "results/{}/{:%Y%m%d_%H%M%S}/".format(self.cell, datetime.now())
         self.model_output = self.output_path + "model.weights"
@@ -510,7 +510,7 @@ def do_evaluate(args):
                 print_sentence(args.output, sentence, labels, predictions)
 
 def do_shell(args):
-    config = Config(args.model_path)
+    config = Config(args)
     helper = ModelHelper.load(args.model_path)
     embeddings = load_embeddings(args, helper)
     config.embed_size = embeddings.shape[1]
