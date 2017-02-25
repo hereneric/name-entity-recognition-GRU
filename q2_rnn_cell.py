@@ -70,7 +70,7 @@ class RNNCell(tf.nn.rnn_cell.RNNCell):
                 initializer=tf.contrib.layers.xavier_initializer())
             self.b = tf.get_variable("b",
                 shape=(self.state_size,),
-                initializer=tf.contrib.layers.xavier_initializer())
+                initializer=tf.constant_initializer(0))
             new_state = tf.sigmoid(tf.matmul(inputs, self.W_x) + tf.matmul(state, self.W_h) + self.b)
 
             ### END YOUR CODE ###
